@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -9,13 +10,19 @@ namespace MockMartianApi.Models
 {
     public class Clearance
     {
+        [DataMember]
         public string clearanceLevel;
+        [DataMember]
         public int clearanceValue;
 
         private Clearance(string clearanceLevel, int clearanceValue)
         {
             this.clearanceLevel = clearanceLevel;
             this.clearanceValue = clearanceValue;
+        }
+
+        public Clearance()
+        {
         }
 
         public static Clearance ACCESS_RESTRICTED { get { return new Clearance("Access Restricted", 0); } }

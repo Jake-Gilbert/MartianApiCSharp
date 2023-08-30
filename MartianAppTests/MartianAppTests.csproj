@@ -10,6 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="bin\Debug\net7.0\resource\martianEntity.json" />
+    <None Include="bin\Debug\net7.0\resource\updatedMartianEntity.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.12.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
